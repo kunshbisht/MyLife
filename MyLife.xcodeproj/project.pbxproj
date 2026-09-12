@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3038BC7F3055653100F6843E /* IDEA.md in Resources */ = {isa = PBXBuildFile; fileRef = 3038BC7D3055652500F6843E /* IDEA.md */; };
+		301A8A6B3055AE9400F58E4C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 301A8A6A3055AE9400F58E4C /* Auth */; };
+		301A8A6D3055AE9400F58E4C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 301A8A6C3055AE9400F58E4C /* Supabase */; };
+		3038BC7F3055653100F6843E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3038BC7D3055652500F6843E /* README.md */; };
 		3038BC8130556C7300F6843E /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 3038BC8030556C7200F6843E /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +34,38 @@
 		3038BC533055649000F6843E /* MyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038BC603055649200F6843E /* MyLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038BC6A3055649200F6843E /* MyLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3038BC7D3055652500F6843E /* IDEA.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IDEA.md; sourceTree = "<group>"; };
+		3038BC7D3055652500F6843E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3038BC8030556C7200F6843E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3052F44B3055C1A500307843 /* Exceptions for "MyLife" folder in "MyLife" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3038BC523055649000F6843E /* MyLife */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		301A8A683055AC2D00F58E4C /* Exceptions for "MyLife" folder in "Copy Bundle Resources" phase from "MyLife" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 3038BC513055649000F6843E /* Resources */;
+			membershipExceptions = (
+				"Models/UIImage+Crop.swift",
+				Services/SupabaseManager.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3038BC553055649000F6843E /* MyLife */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3052F44B3055C1A500307843 /* Exceptions for "MyLife" folder in "MyLife" target */,
+				301A8A683055AC2D00F58E4C /* Exceptions for "MyLife" folder in "Copy Bundle Resources" phase from "MyLife" target */,
+			);
 			path = MyLife;
 			sourceTree = "<group>";
 		};
@@ -59,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301A8A6D3055AE9400F58E4C /* Supabase in Frameworks */,
+				301A8A6B3055AE9400F58E4C /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +111,7 @@
 		3038BC4A3055649000F6843E = {
 			isa = PBXGroup;
 			children = (
-				3038BC7D3055652500F6843E /* IDEA.md */,
+				3038BC7D3055652500F6843E /* README.md */,
 				3038BC8030556C7200F6843E /* .gitignore */,
 				3038BC553055649000F6843E /* MyLife */,
 				3038BC633055649200F6843E /* MyLifeTests */,
@@ -121,6 +150,8 @@
 			);
 			name = MyLife;
 			packageProductDependencies = (
+				301A8A6A3055AE9400F58E4C /* Auth */,
+				301A8A6C3055AE9400F58E4C /* Supabase */,
 			);
 			productName = MyLife;
 			productReference = 3038BC533055649000F6843E /* MyLife.app */;
@@ -204,6 +235,9 @@
 			);
 			mainGroup = 3038BC4A3055649000F6843E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				301A8A693055AE9400F58E4C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3038BC543055649000F6843E /* Products */;
 			projectDirPath = "";
@@ -221,7 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3038BC7F3055653100F6843E /* IDEA.md in Resources */,
+				3038BC7F3055653100F6843E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +445,8 @@
 				DEVELOPMENT_TEAM = D222VDKX92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyLife/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "MyLife needs access to your camera to take snapshots.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -443,6 +479,8 @@
 				DEVELOPMENT_TEAM = D222VDKX92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyLife/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "MyLife needs access to your camera to take snapshots.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -589,6 +627,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		301A8A693055AE9400F58E4C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		301A8A6A3055AE9400F58E4C /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301A8A693055AE9400F58E4C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		301A8A6C3055AE9400F58E4C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301A8A693055AE9400F58E4C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3038BC4B3055649000F6843E /* Project object */;
 }
