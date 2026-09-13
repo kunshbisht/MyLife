@@ -16,12 +16,19 @@ struct ContentView: View {
         Group {
             if auth.isLoading {
                 ProgressView()
+
             } else if let user = auth.user {
-                if auth.isGoogleUser || user.emailConfirmedAt != nil {
-                    MainAppView()
-                } else {
+
+                if !auth.isGoogleUser && user.emailConfirmedAt == nil {
                     EmailConfirmationView()
+
+                } else if !auth.hasUsername {
+                    UsernameView()
+
+                } else {
+                    MainAppView()
                 }
+
             } else {
                 AuthView()
             }
