@@ -48,7 +48,7 @@ final class AuthManager: ObservableObject {
 
         isLoading = false
     }
-    
+
     func refreshUser() async {
         do {
             let session = try await supabase.auth.refreshSession()
@@ -128,9 +128,7 @@ final class AuthManager: ObservableObject {
                 .value
 
             hasUsername = profile?["username"] != nil
-
         } catch {
-            // No profile or no username yet
             hasUsername = false
         }
     }
